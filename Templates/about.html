@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="m-0 p-0">
+    <!-- Hero Section -->
+    <div class="pb-5 sm:h-[50vh] relative flex flex-col"
+        style="background-image: url('/static/images/about-bg.jpg'); background-size: cover; background-position: center;">
+        <!-- Social Media Links -->
+        <div
+            class="w-full flex flex-row items-center justify-between px-4 text-white text-[0.5rem] sm:text-xs md:text-sm sm:mb-5 z-10">
+            <div class="hidden md:block">Sowing Quality, Reaping Trust.</div>
+            <div class="px-4 py-2 flex items-center gap-3">
+                Follow Us:
+                <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://web.whatsapp.com" target="_blank" class="hover:text-blue-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="text-[7px] sm:text-sm">
+                <i class="fab fa-whatsapp"></i> +91 7828877648 | <i class="fas fa-phone-alt"></i> +91 8103191724
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar"
+            class="relative bg-green-600/90 text-white px-3 py-1 sm:px-6 sm:py-4 w-4/5 mx-auto rounded-lg z-10">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="text-2xl font-bold">
+                    <img src="/static/images/shrinath-agro-logo.png" alt="logo-img"
+                        class="w-[45px] sm:w-[55px] md:w-[65px] lg:w-[70px] rounded-full">
+                </div>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-6 text-lg md:text-md">
+                    <a href="/index/" class="hover:text-yellow-300">Home</a>
+                    <a href="/about/" class="hover:text-yellow-300">About</a>
+                    <a href="/products/" class="hover:text-yellow-300">Products</a>
+                    <a href="/certificates/" class="hover:text-yellow-300">Certifications</a>
+                    <a href="/contact/" class="hover:text-yellow-300">Contact us</a>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="absolute top-full left-1/2 -translate-x-1/2 bg-green-600/90 text-white shadow-md md:hidden hidden flex flex-col items-center px-6 py-4 space-y-4 w-full z-50">
+                <a href="/index/" class="hover:text-yellow-300">Home</a>
+                <a href="/about/" class="hover:text-yellow-300">About</a>
+                <a href="/products/" class="hover:text-yellow-300">Products</a>
+                <a href="/certificates/" class="hover:text-yellow-300">Certificates</a>
+                <a href="/contact/" class="hover:text-yellow-300">Contact Us</a>
+            </div>
+        </nav>
+
+        <!-- About Us Text -->
+        <h1 class="text-center text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mt-8 shadow-xl">
+            About Us
+        </h1>
+    </div>
+
+    <!-- About Section -->
+    <div class="flex flex-col sm:flex-row items-center justify-center px-[10%] py-10 min-h-screen mt-5">
+        <div class="left-text p-3 flex flex-col items-start justify-center w-full md:max-w-[50%] h-full">
+            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-5">Welcome to</h3>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">Shreenath Agro Industries</h1>
+            <p class="text-sm sm:text-base md:text-lg"></p>
+            We are a trusted name in the psyllium industry, committed to providing premium psyllium products that
+            promote
+            wellness naturally.
+            <br>
+            Founded with the vision to bridge traditional farming with modern quality standards, our company sources the
+            finest psyllium seeds directly from sustainable farms in India. Our state-of-the-art processing ensures
+            purity, consistency, and customer satisfaction in every batch.
+            <br>
+            With a strong focus on innovation, hygiene, and certifications, we proudly serve domestic and international
+            markets with customized solutions tailored to diverse industry needs.
+            <br>
+            Join hands with us to experience the power of nature, delivered with excellence.
+            </p>
+            <button class="rounded px-3 py-2 font-semibold bg-green-300 mt-4">Know More</button>
+        </div>
+        <div class="right-img p-3 flex items-start justify-center w-full md:max-w-[50%]">
+            <img src="/static/images/about.jpg" alt="about-us-img" class="rounded-lg h-full">
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="px-5 py-10 max-w-screen"
+        style="background-image: url('/static/images/pattern-bg.jpg');background-size: cover;">
+        <div class="stat-grid grid grid-cols-1 text-green-900 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center p-6">
+            <div>
+                <h1 id="stat-clients" class="text-4xl sm:text-5xl md:text-6xl font-bold">0+</h1>
+                <p class="text-lg sm:text-xl md:text-2xl">Satisfied Clients</p>
+            </div>
+            <div>
+                <h1 id="stat-teams" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+                <p class="text-lg sm:text-xl md:text-2xl">Expert Teams</p>
+            </div>
+            <div>
+                <h1 id="stat-awards" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+                <p class="text-lg sm:text-xl md:text-2xl">Awards</p>
+            </div>
+            <div>
+                <h1 id="stat-land" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+                <p class="text-lg sm:text-xl md:text-2xl">Acres of Land Restored</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="py-12 ,max-h-[80vmin] flex flex-col justify-center items-center">
+        <div class="container flex flex-col gap-10 px-6 lg:px-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">How It Works</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-seedling text-green-600 text-6xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Sourcing</h3>
+                    <p class="text-sm sm:text-base">
+                        We source the finest psyllium seeds directly from sustainable farms.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-industry text-green-600 text-6xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Processing</h3>
+                    <p class="text-sm sm:text-base">
+                        Our state-of-the-art facilities ensure purity and consistency.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-box text-green-600 text-6xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Packaging</h3>
+                    <p class="text-sm sm:text-base">
+                        Hygienic and secure packaging to maintain product quality.
+                    </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-truck text-green-600 text-6xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Delivery</h3>
+                    <p class="text-sm sm:text-base">
+                        Timely delivery to domestic and international markets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vision and Mission Section -->
+    <div class="w-full min-h-[70vmin] bg-green-600 py-12 flex flex-col gap-6 justify-center">
+        <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row gap-6">
+            <!-- Vision Box -->
+            <div class="bg-green-700 text-white p-8 rounded-lg shadow-lg flex-1 flex flex-col items-start">
+                <i class="fas fa-eye text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+                <p class="text-base">
+                    To become a globally trusted leader in the psyllium industry by delivering premium-quality products,
+                    promoting sustainable practices, and enhancing health and well-being through nature’s purest
+                    offerings.
+                </p>
+            </div>
+            <!-- Mission Box -->
+            <div class="bg-green-700 text-white p-8 rounded-lg shadow-lg flex-1 flex flex-col items-start">
+                <i class="fas fa-bullseye text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+                <p class="text-base"></p>
+                To consistently provide superior psyllium products by integrating
+                ethical sourcing, advanced processing, and customer-centric services, while contributing
+                to a healthier world and supporting environmentally responsible farming communities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Stats scrolling animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>
+
+    <script>
+        // Toggle mobile nav
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navbar = document.getElementById("navbar");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            navbar.classList.toggle("rounded-lg");
+            navbar.classList.toggle("rounded-t-lg");
+        });
+    </script>
+    <script>
+        // Stats animation
+        document.addEventListener('DOMContentLoaded', function () {
+            let animated = false;
+
+            function animateNumbers() {
+                if (animated) return;
+
+                const section = document.querySelector('.stat-grid');
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight) {
+                    animated = true;
+
+                    const clients = new countUp.CountUp('stat-clients', 1200, { suffix: '+' });
+                    const teams = new countUp.CountUp('stat-teams', 64);
+                    const awards = new countUp.CountUp('stat-awards', 126);
+                    const land = new countUp.CountUp('stat-land', 1500);
+
+                    clients.start();
+                    teams.start();
+                    awards.start();
+                    land.start();
+                }
+            }
+
+            window.addEventListener('scroll', animateNumbers);
+        });
+    </script>
+</body>
+
+</html>

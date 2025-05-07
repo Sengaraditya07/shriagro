@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="m-0 p-0">
+    <!-- Hero Section -->
+    <div class="pb-5 sm:h-[50vh] relative flex flex-col"
+        style="background-image: url('/static/images/about-bg.jpg'); background-size: cover; background-position: center;">
+        <!-- Social Media Links -->
+        <div
+            class="w-full flex flex-row items-center justify-between px-4 text-white text-[0.5rem] sm:text-xs md:text-sm sm:mb-5 z-10">
+            <div class="hidden md:block">Sowing Quality, Reaping Trust.</div>
+            <div class="px-4 py-2 flex items-center gap-3">
+                Follow Us:
+                <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://web.whatsapp.com" target="_blank" class="hover:text-blue-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="text-[7px] sm:text-sm">
+                <i class="fab fa-whatsapp"></i> +91 7828877648 | <i class="fas fa-phone-alt"></i> +91 8103191724
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar"
+            class="relative bg-green-600/90 text-white px-3 py-1 sm:px-6 sm:py-4 w-4/5 mx-auto rounded-lg z-10">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="text-2xl font-bold">
+                    <img src="/static/images/shrinath-agro-logo.png" alt="logo-img"
+                        class="w-[45px] sm:w-[55px] md:w-[65px] lg:w-[70px] rounded-full">
+                </div>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-6 text-lg md:text-md">
+                    <a href="/index/" class="hover:text-yellow-300">Home</a>
+                    <a href="/about/" class="hover:text-yellow-300">About</a>
+                    <a href="/products/" class="hover:text-yellow-300">Products</a>
+                    <a href="/certificates/" class="hover:text-yellow-300">Certifications</a>
+                    <a href="/contact/" class="hover:text-yellow-300">Contact us</a>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="absolute top-full left-1/2 -translate-x-1/2 bg-green-600/90 text-white shadow-md md:hidden hidden flex flex-col items-center px-6 py-4 space-y-4 w-full z-50">
+                <a href="/index/" class="hover:text-yellow-300">Home</a>
+                <a href="/about/" class="hover:text-yellow-300">About</a>
+                <a href="/products/" class="hover:text-yellow-300">Products</a>
+                <a href="/certificates/" class="hover:text-yellow-300">Certificates</a>
+                <a href="/contact/" class="hover:text-yellow-300">Contact Us</a>
+            </div>
+        </nav>
+
+        <!-- About Us Text -->
+        <h1 class="text-center text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mt-8">
+            Our Products
+        </h1>
+    </div>
+
+    <!-- products tabs -->
+    <div class="max-w-7xl mx-auto mt-10">
+        <!-- Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-10 pb-2">
+            <button onclick="showProduct('product1')" id="tab-product1"
+                class="font-semibold text-gray-800 text-sm sm:text-base transition-all duration-300">
+                Psyllium Seeds
+            </button>
+            <button onclick="showProduct('product2')" id="tab-product2"
+                class="font-semibold text-gray-800 text-sm sm:text-base transition-all duration-300">
+                Psyllium Husk
+            </button>
+            <button onclick="showProduct('product3')" id="tab-product3"
+                class="font-semibold text-gray-800 text-sm sm:text-base transition-all duration-300">
+                Psyllium Husk Powder
+            </button>
+        </div>
+
+
+        <!-- Product Details -->
+
+        <!-- product 1 -->
+        {% for i in prod_data %}
+            <div id="product1" class="product-detail active bg-green-50 shadow-lg rounded-lg p-8">
+                <h2 class="text-3xl font-bold mb-4 text-green-700">{{i.prod_head}}</h2>
+                <p class="text-gray-700 mb-4">"Nature’s tiny seeds for powerful digestive health."</p>
+                <img src="/Media/{{i.prod_image}}" alt="Psyllium Seeds" class="rounded-lg mb-6 w-1/2 mx-auto">
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Description:</h3>
+                <p>{{i.prod_desc|safe}}</p>
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Key Benefits:</h3>
+                <p class="text-gray-700 mb-4">{{i.prod_benefit | safe}}</p>
+
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">How to Use:</h3>
+                <p class="text-gray-700 mb-4">{{i.prod_howtouse | safe}}</p>
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Important Tips:</h3>
+                <p class="text-gray-700 mb-4">{{i.prod_imptips | safe}}</p>
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Sowing and Harvesting Info:</h3>
+                <p class="text-gray-700 mb-4">{{i.prod_Shinfo | safe}}</p>
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Market Availability:</h3>
+                <p class="text-gray-700 mb-4"><strong>Fresh Seeds Available:</strong>March to May.</p>
+
+                <h3 class="text-2xl font-semibold text-green-600 mb-2">Nutritional Information (per serving, approx. 1
+                    tbsp):</h3>
+                <p class="text-gray-700 mb-4">{{i.prod_nutinfo | safe}}</p>
+
+            </div>
+        {% endfor %}
+        <!-- product 2 -->
+        <div id="product2" class="product-detail active bg-green-50 shadow-lg rounded-lg p-8">
+            <h2 class="text-3xl font-bold mb-4 text-green-700">Psyllium Husk</h2>
+            <p class="text-gray-700 mb-4">"Pure fiber for a smoother digestion and better health."</p>
+            <img src="/static/images/1.png" alt="Psyllium Seeds" class="rounded-lg mb-6 w-1/2 mx-auto">
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Description:</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Psyllium Husk is the fibrous outer layer of the Plantago ovata seeds, known for its incredible health
+                benefits. This natural product is packed with soluble fiber that supports digestion, promotes heart
+                health,
+                helps with weight management, and aids in regulating blood sugar levels. Psyllium Husk’s ability to form
+                a
+                gel-like consistency when mixed with water makes it an ideal supplement for improving bowel movements
+                and
+                ensuring smooth digestive processes.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Key Benefits:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Supports Digestive Health:</strong> Helps regulate bowel movements and eases constipation.
+                </li>
+                <li><strong>Promotes Heart Health:</strong> Contributes to cholesterol management and overall
+                    cardiovascular health.</li>
+                <li><strong>Aids Weight Management:</strong> Its high fiber content promotes a feeling of fullness,
+                    reducing unnecessary cravings.</li>
+                <li><strong>Blood Sugar Regulation:</strong> Assists in balancing blood sugar levels, making it a
+                    valuable supplement for diabetic individuals.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">How to Use:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Mix with Water:</strong> Stir a tablespoon of psyllium husk into a glass of water. Let it
+                    swell for a few minutes before drinking.</li>
+                <li><strong>Smoothies:</strong> Add to your smoothies for an extra fiber boost.</li>
+                <li><strong>Baking:</strong> A key ingredient in gluten-free baking to add fiber and improve texture.
+                </li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Important Tips:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Always consume with plenty of water to avoid digestive issues and ensure the husk swells properly.
+                </li>
+                <li>Start with a small amount to assess your body’s reaction, then gradually increase intake.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Sowing and Harvesting Info:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Sowing Time:</strong> August to September.</li>
+                <li><strong>Harvesting Time:</strong> February to April.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Market Availability:</h3>
+            <p class="text-gray-700 mb-4"><strong>Fresh Husk Available:</strong> March to May.</p>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Nutritional Information (per serving, approx. 1
+                tbsp):</h3>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><strong>Calories:</strong> 20 kcal</li>
+                <li><strong>Fiber:</strong> 5g</li>
+                <li><strong>Carbs:</strong> 5g (Mostly fiber, no net carbs)</li>
+            </ul>
+        </div>
+
+        <!-- product 3 -->
+        <div id="product3" class="product-detail active bg-green-50 shadow-lg rounded-lg p-8">
+            <h2 class="text-3xl font-bold mb-4 text-green-700">Psyllium Husk Powder</h2>
+            <p class="text-gray-700 mb-4">"Fine powder, mighty fiber - a simple way to better health."</p>
+            <img src="/static/images/1.png" alt="Psyllium Seeds" class="rounded-lg mb-6 w-1/2 mx-auto">
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Description:</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Psyllium Husk Powder is a finely ground, nutrient-rich powder derived from the husks of Plantago ovata
+                seeds. Known for its exceptional concentration of soluble fiber, this powder offers an effortless way to
+                boost digestive health, manage weight, support heart function, and regulate blood sugar levels. When
+                mixed with water, it forms a smooth gel that gently cleanses the digestive tract and promotes satiety,
+                making it a versatile and effective supplement for daily health maintenance.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Key Benefits:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Promotes Digestive Wellness:</strong>Softens stool and supports regular bowel movements.
+                </li>
+                <li><strong>Supports Heart Health:</strong>Assists in lowering cholesterol levels naturally.</li>
+                <li><strong>Aids Weight Management:</strong>Creates a feeling of fullness, helping to reduce appetite
+                    and control portions.</li>
+                <li><strong>Helps Balance Blood Sugar:</strong> Slows digestion and stabilizes glucose absorption after
+                    meals.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">How to Use:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Mix into Water or Juices:</strong>Stir a teaspoon of psyllium husk powder into a glass of
+                    water or your favorite juice, and drink immediately.</li>
+                <li><strong>Boost Smoothies:</strong>Add a small amount to smoothies for a fiber-rich upgrade.</li>
+                <li><strong>Baking:</strong>Ideal for gluten-free recipes — improves texture and fiber content in bread,
+                    muffins, and pancakes.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Important Tips:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Always consume with plenty of water to avoid digestive issues and ensure the husk swells properly.
+                </li>
+                <li>Start with a small amount to assess your body’s reaction, then gradually increase intake.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Sowing and Harvesting Info:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Sowing Time:</strong> August to September.</li>
+                <li><strong>Harvesting Time:</strong> February to April.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Market Availability:</h3>
+            <p class="text-gray-700 mb-4"><strong>Fresh Powder Available:</strong>March to May.</p>
+
+            <h3 class="text-2xl font-semibold text-green-600 mb-2">Nutritional Information (per serving, approx. 1
+                tbsp):</h3>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><strong>Calories:</strong> 15 kcal</li>
+                <li><strong>Fiber:</strong> 3-4g</li>
+                <li><strong>Carbs:</strong> 4g (mostly from soluble fiber)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Toggle mobile nav
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navbar = document.getElementById("navbar");
+
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            navbar.classList.toggle("rounded-lg");
+            navbar.classList.toggle("rounded-t-lg");
+        });
+
+        // Swiper setup
+        const swiper = new Swiper(".swiper", {
+            loop: true,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false,
+            },
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script>
+        function showProduct(productId) {
+            // Hide all products
+            const products = document.querySelectorAll('.product-detail');
+            products.forEach(product => {
+                product.classList.add('hidden');
+            });
+
+            // Remove active styles from all tabs
+            const tabs = document.querySelectorAll('.flex button');
+            tabs.forEach(tab => {
+                tab.classList.remove('border-b-4', 'border-blue-500');
+            });
+
+            // Show selected product
+            document.getElementById(productId).classList.remove('hidden');
+
+            // Activate clicked tab with border
+            const activeTab = document.getElementById('tab-' + productId);
+            activeTab.classList.add('border-b-4', 'border-blue-500');
+        }
+
+        // On page load, if URL hash is there, open correct tab
+        window.onload = function () {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showProduct(hash);
+            } else {
+                showProduct('product1'); // Default tab if no hash
+            }
+        }
+    </script>
+
+</body>
+
+</html>

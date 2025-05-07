@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Begin Document -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>document</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="m-0 p-0">
+
+  <!-- Home -->
+  <div class="relative min-h-screen w-full">
+    <!-- Swiper Carousel -->
+    <div class="swiper h-full w-full absolute inset-0 z-0">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/static/images/slider-1.jpg" class="w-auto h-full object-cover brightness-50" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/static/images/slider-2.jpg" class="w-full h-full object-cover brightness-50" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/static/images/slider-3.jpg" class="w-full h-full object-cover brightness-50" />
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next text-white mx-5 rounded-full p-10 hidden md:flex"></div>
+      <div class="swiper-button-prev text-white mx-5 rounded-full p-10 hidden md:flex"></div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination mb-4"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="relative z-10">
+      <!-- Social Media Header -->
+      <div
+        class="flex flex-row items-center justify-between px-4 text-white text-[0.5rem] sm:text-xs md:text-sm mb-1 sm:mb-5">
+        <div class="hidden md:block">Sowing Quality, Reaping Trust.</div>
+        <div class="px-4 py-2 flex items-center gap-3">
+          Follow Us :
+          <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://web.whatsapp.com" target="_blank" class="hover:text-blue-300">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="text-[7px] sm:text-sm">
+          <i class="fab fa-whatsapp"></i> +91 7828877648 | <i class="fas fa-phone-alt"></i> +91 8103191724
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <nav id="navbar" class="relative bg-green-600/90 text-white px-2 py-1 sm:px-6 sm:py-4 w-4/5 mx-auto rounded-lg">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="text-2xl font-bold">
+            <img src="/static/images/shrinath-agro-logo.png" alt="logo-img"
+              class="w-[45px] sm:w-[55px] md:w-[65px] lg:w-[70px] rounded-full">
+          </div>
+
+          <!-- Desktop Links -->
+          <div class="hidden md:flex space-x-6 text-lg md:text-md">
+            <a href="/index/" class="hover:text-yellow-300">Home</a>
+            <a href="/about/" class="hover:text-yellow-300">About</a>
+            <a href="/products/" class="hover:text-yellow-300">Products</a>
+            <a href="/certificates/" class="hover:text-yellow-300">Certifications</a>
+            <a href="/contact/" class="hover:text-yellow-300">Contact us</a>
+          </div>
+
+          <!-- Hamburger Icon -->
+          <div class="md:hidden flex items-center">
+            <button id="menuBtn">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+          class="absolute top-full left-1/2 -translate-x-1/2 bg-green-600/90 text-white shadow-md md:hidden hidden flex flex-col items-center px-6 py-4 space-y-4 w-full z-50">
+          <a href="/index/" class="hover:text-yellow-300">Home</a>
+          <a href="/about/" class="hover:text-yellow-300">About</a>
+          <a href="/products/" class="hover:text-yellow-300">Products</a>
+          <a href="/certificates/" class="hover:text-yellow-300">Certificates</a>
+          <a href="/contact/" class="hover:text-yellow-300">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="min-h-screen max-w-screen bg-grey-800">
+    <!-- About Section -->
+    <div class="flex flex-col sm:flex-row items-center justify-center px-[10%] py-10 min-h-screen mt-5">
+      <div class="left-text p-3 flex flex-col items-start justify-center w-full md:max-w-[50%] h-full">
+        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-5">Welcome to</h3>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">Shreenath Agro Industries</h1>
+        <p class="text-sm sm:text-base md:text-lg"></p>
+        We are a trusted name in the psyllium industry, committed to providing premium psyllium products that promote
+        wellness naturally.
+        <br>
+        Founded with the vision to bridge traditional farming with modern quality standards, our company sources the
+        finest psyllium seeds directly from sustainable farms in India. Our state-of-the-art processing ensures
+        purity, consistency, and customer satisfaction in every batch.
+        <br>
+        With a strong focus on innovation, hygiene, and certifications, we proudly serve domestic and international
+        markets with customized solutions tailored to diverse industry needs.
+        <br>
+        Join hands with us to experience the power of nature, delivered with excellence.
+        </p>
+        <a href="./about.html"><button class="rounded px-3 py-2 font-semibold bg-green-300 mt-4">Know More</button></a>
+      </div>
+      <div class="right-img p-3 flex items-start justify-center w-full md:max-w-[50%]">
+        <img src="/static/images/about.jpg" alt="about-us-img" class="rounded-lg h-full">
+      </div>
+    </div>
+
+    <!-- Our Products Section -->
+    <div class="flex flex-col justify-evenly items-center p-10 pb-40 min-h-screen bg-green-800">
+      <h1 class="text-green-100 font-bold text-5xl mb-6">Our Products</h1>
+      <div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
+        <!-- Card 1 -->
+        <div class="relative w-auto h-80 overflow-hidden group">
+          <img src="/static/images/1.png" alt="Spices"
+            class="w-full h-full object-cover rounded-xl transform group-hover:-translate-x-full transition-transform duration-500" />
+          <div
+            class="text-white absolute inset-0 bg-green-800 flex flex-col items-center justify-center px-4 text-gray-800 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h2 class="font-bold text-xl mb-2">Psyllium Husk (99% Purity)</h2>
+            <p>Natural fiber supplement widely used in health supplements, pharmaceuticals, and nutrition industries.
+            </p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="relative w-auto h-80 overflow-hidden group">
+          <img src="/static/images/2.jpg" alt="Herbs"
+            class="w-full h-full object-cover rounded-xl transform group-hover:-translate-x-full transition-transform duration-500" />
+          <div
+            class="text-white absolute inset-0 bg-green-800 flex flex-col items-center justify-center px-4 text-gray-800 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h2 class="font-bold text-xl mb-2">Psyllium Husk Powder</h2>
+            <p>Finely milled psyllium husk powder for better solubility, perfect for formulations in foods, beverages,
+              and medicines.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="relative w-auto h-80 overflow-hidden group">
+          <img src="/static/images/3.jpg" alt="Chilies"
+            class="w-full h-full object-cover rounded-xl transform group-hover:-translate-x-full transition-transform duration-500" />
+          <div
+            class="text-white absolute inset-0 bg-green-800 flex flex-col items-center justify-center px-4 text-gray-800 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h2 class=" font-bold text-xl mb-2">Psyllium Seeds</h2>
+            <p>High-quality, organically cultivated psyllium seeds used as a raw material for various industries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="px-5 py-10 max-w-screen"
+      style="background-image: url('../images/pattern-bg.jpg');background-size: cover;">
+      <div class="stat-grid grid grid-cols-1 text-green-900 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center p-6">
+        <div>
+          <h1 id="stat-clients" class="text-4xl sm:text-5xl md:text-6xl font-bold">0+</h1>
+          <p class="text-lg sm:text-xl md:text-2xl">Satisfied Clients</p>
+        </div>
+        <div>
+          <h1 id="stat-teams" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+          <p class="text-lg sm:text-xl md:text-2xl">Expert Teams</p>
+        </div>
+        <div>
+          <h1 id="stat-awards" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+          <p class="text-lg sm:text-xl md:text-2xl">Awards</p>
+        </div>
+        <div>
+          <h1 id="stat-land" class="text-4xl sm:text-5xl md:text-6xl font-bold">0</h1>
+          <p class="text-lg sm:text-xl md:text-2xl">Acres of Land Restored</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="bg-green-400 h-screen px-2 py-8 mt-5 text-green-900"
+      style="background-image: url('/static/images/choose-us-img.jpg');background-size: cover;">
+      <div class="flex flex-col items-center lg:items-start h-full w-auto px-3 md:px-10">
+        <div class="flex flex-col items-center justify-center p-3 h-full w-full lg:w-1/2 rounded-xl overflow-hidden"
+          style="box-shadow: -15px 10px 0px rgb(0, 147, 12);background-image: url('/static/images/pattern-bg.jpg');background-size: cover;">
+          <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">Why choose us</h1>
+          <div class="grid grid-cols-1 gap-1 md:gap-5">
+            <div class="flex p-2 gap-2 items-center max-w-[70%]">
+              <div class="text-2xl sm:text-3xl lg:text-4xl">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <div>
+                <h2 class="text-sm sm:text-md md:text-lg lg:text-xl font-semibold">Uncompromised Quality</h2>
+                <p class="text-xs sm:text-sm md:text-base lg:text-md">
+                  Each product undergoes strict quality checks to meet global standards.
+                </p>
+              </div>
+            </div>
+            <div class="flex p-2 gap-2 items-center max-w-[70%]">
+              <div class="text-2xl sm:text-3xl lg:text-4xl">
+                <i class="fas fa-box-open"></i>
+              </div>
+              <div>
+                <h2 class="text-sm sm:text-md md:text-lg lg:text-xl font-semibold">Sustainable Sourcing</h2>
+                <p class="text-xs sm:text-sm md:text-base lg:text-md">
+                  Ethical and eco-friendly farming practices ensure a greener future.
+                </p>
+              </div>
+            </div>
+            <div class="flex p-2 gap-2 items-center max-w-[70%]">
+              <div class="text-2xl sm:text-3xl lg:text-4xl">
+                <i class="fas fa-gears"></i>
+              </div>
+              <div>
+                <h2 class="text-sm sm:text-md md:text-lg lg:text-xl font-semibold">Customized Solutions</h2>
+                <p class="text-xs sm:text-sm md:text-base lg:text-md">
+                  We offer tailored psyllium grades, packaging, and bulk solutions based on client requirements.
+                </p>
+              </div>
+            </div>
+            <div class="flex p-2 gap-2 items-center max-w-[70%]">
+              <div class="text-2xl sm:text-3xl lg:text-4xl">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <div>
+                <h2 class="text-sm sm:text-md md:text-lg lg:text-xl font-semibold">Global Reach</h2>
+                <p class="text-xs sm:text-sm md:text-base lg:text-md">
+                  Exporting to more than XX countries with proven customer satisfaction
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Are We Different Section -->
+    <div class="bg-gray-100 min-h-screen flex items-center justify-center py-10 lg:px-40"
+      style="background-image: url('../images/footer-bg.png');background-size: contain;">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl text-green-800 font-bold text-center mb-12">Why Are We Different</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+          <div class="eco-card bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Farm-to-Factory Integration</h3>
+            <p class="text-gray-600">Direct sourcing from farms, ensuring traceability and authenticity.</p>
+          </div>
+          <div class="eco-card bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">State-of-the-Art Processing</h3>
+            <p class="text-gray-600">Advanced machinery and hygienic facilities for premium-grade products.</p>
+          </div>
+          <div class="eco-card bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Certifications and Compliance</h3>
+            <p class="text-gray-600">FSSAI , FDA and other international certifications.</p>
+          </div>
+          <div class="eco-card bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Customer-Centric Approach</h3>
+            <p class="text-gray-600">Flexible services and proactive communication at every stage..</p>
+          </div>
+          <div class="eco-card bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast and Reliable Delivery</h3>
+            <p class="text-gray-600">Efficient logistics and supply chain management for on-time deliveries worldwide.
+            </p>
+          </div>
+          <div class="eco-card bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-green-500 text-4xl mb-4">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Continuous Innovation</h3>
+            <p class="text-gray-600">Research-driven improvements in product quality and applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Years of Excellence Section -->
+    <div class="flex flex-col gap-10 md:flex-row items-center justify-center  bg-gray-200 px-5 md:px-20 py-10">
+      <!-- Left -->
+      <div class="flex-1 flex flex-col text-center">
+        <div class="text-[10rem] lg:text-[15rem] text-transparent bg-clip-text bg-center bg-cover mb-4"
+          style="background-image: url('/static/images/number-bg.png');background-size: 100%; font-family: 'Boldonse', system-ui;font-weight: 900;">
+          20
+        </div>
+        <p class="text-xl font-semibold">Years of Excellence</p>
+        <p class="text-sm text-gray-600 mt-2">Dedicated to sustainable farming practices.</p>
+      </div>
+      <!-- Right -->
+      <div class="flex-1 flex flex-col bg-green-600 text-white shadow-lg rounded-lg p-6">
+        <div class="w-24 h-24 rounded-full overflow-hidden mb-4">
+          <img src="/static/images/farmer.jpeg" alt="Farmer" class="w-full h-full object-cover">
+        </div>
+        <p class="italic">
+          "I’ve been growing psyllium for many years, and this husk is one of the best I’ve seen — clean, natural, and
+          well-processed. People in my village take it after dinner, and it really helps with digestion and keeping the
+          stomach light."
+        </p>
+        <p class="text-sm mt-2">- Manohar lal, Farmer</p>
+      </div>
+    </div>
+
+    <!-- certificates section -->
+    <div class="bg-gray-100 py-10">
+      <h2 class="text-4xl font-bold text-center mb-8">Our Certificates</h2>
+      <div id="collaborations-gallery" class="overflow-x-auto px-5">
+        <div class="flex gap-6 items-center justify-center">
+          <img src="/static/images/fda-logo.png" alt="Brand 1"
+            class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-cover rounded-full">
+          <img src="/static/images/fssai-logo.jpg" alt="Brand 2"
+            class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-cover rounded-full">
+          <img src="/static/images/iec-logo.png" alt="Brand 3"
+            class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-cover rounded-full">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Contact Us Section -->
+    <div class="bg-gray-200 py-10 px-5"
+      style="background-image: url('/static/images/footer-bg.png');background-size: contain;">
+      <h2 class="text-4xl font-bold text-center mb-6">Contact Us</h2>
+      <p class="text-center text-gray-600 mb-8">Have questions about our products? Send us a message!</p>
+      <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" required
+              class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-900 text-white py-6">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-evenly items-center gap-6">
+          <!-- Directors Section -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold mb-4">Our Directors</h3>
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+                  <img src="/static/images/director-1.jpg" alt="Director 1" class="w-full h-full object-cover">
+                </div>
+                <p class="text-sm font-semibold">Mr. Manoj Modi</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+                  <img src="/static/images/director-2.jpg" alt="Director 2" class="w-full h-full object-cover">
+                </div>
+                <p class="text-sm font-semibold">Mr. Suresh Patidar</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="text-center">
+            <h3 class="text-lg font-bold">Shreenath Agro Industries</h3>
+            <p class="text-sm">Committed to quality and sustainability.</p>
+            <p class="text-sm mt-2">Email: shrinathagroindustries12@gmail.com</p>
+            <p class="text-sm"><i class="fab fa-whatsapp"></i> +91 7828877648</p>
+            <p class="text-sm"><i class="fas fa-phone-alt"></i> +91 8103191724</p>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <p class="text-sm">&copy; 2023 Shreenath Agro Industries. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- Stats scrolling animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle mobile nav
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navbar = document.getElementById("navbar");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      navbar.classList.toggle("rounded-lg");
+      navbar.classList.toggle("rounded-t-lg");
+    });
+  </script>
+  <script>
+    // Stats animation
+    document.addEventListener('DOMContentLoaded', function () {
+      let animated = false;
+
+      function animateNumbers() {
+        if (animated) return;
+
+        const section = document.querySelector('.stat-grid');
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight) {
+          animated = true;
+
+          const clients = new countUp.CountUp('stat-clients', 1200, { suffix: '+' });
+          const teams = new countUp.CountUp('stat-teams', 64);
+          const awards = new countUp.CountUp('stat-awards', 126);
+          const land = new countUp.CountUp('stat-land', 1500);
+
+          clients.start();
+          teams.start();
+          awards.start();
+          land.start();
+        }
+      }
+
+      window.addEventListener('scroll', animateNumbers);
+    });
+  </script>
+  
+  <!-- Swiper js setup -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+
+</html>

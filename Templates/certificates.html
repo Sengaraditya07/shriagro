@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <div class="pb-5 sm:h-[50vh] relative flex flex-col"
+        style="background-image: url('/static/images/about-bg.jpg'); background-size: cover; background-position: center;">
+        <!-- Social Media Links -->
+        <div
+            class="w-full flex flex-row items-center justify-between px-4 text-white text-[0.5rem] sm:text-xs md:text-sm sm:mb-5 z-10">
+            <div class="hidden md:block">Sowing Quality, Reaping Trust.</div>
+            <div class="px-4 py-2 flex items-center gap-3">
+                Follow Us:
+                <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://web.whatsapp.com" target="_blank" class="hover:text-blue-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="text-[7px] sm:text-sm">
+                <i class="fab fa-whatsapp"></i> +91 7828877648 | <i class="fas fa-phone-alt"></i> +91 8103191724
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar"
+            class="relative bg-green-600/90 text-white px-3 py-1 sm:px-6 sm:py-4 w-4/5 mx-auto rounded-lg z-10">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="text-2xl font-bold">
+                    <img src="/static/images/shrinath-agro-logo.png" alt="logo-img"
+                        class="w-[45px] sm:w-[55px] md:w-[65px] lg:w-[70px] rounded-full">
+                </div>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-6 text-lg md:text-md">
+                    <a href="/index/" class="hover:text-yellow-300">Home</a>
+                    <a href="/about/" class="hover:text-yellow-300">About</a>
+                    <a href="/products/" class="hover:text-yellow-300">Products</a>
+                    <a href="/certificates/" class="hover:text-yellow-300">Certifications</a>
+                    <a href="/contact/" class="hover:text-yellow-300">Contact us</a>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="absolute top-full left-1/2 -translate-x-1/2 bg-green-600/90 text-white shadow-md md:hidden hidden flex flex-col items-center px-6 py-4 space-y-4 w-full z-50">
+                <a href="/index/" class="hover:text-yellow-300">Home</a>
+                <a href="/about/" class="hover:text-yellow-300">About</a>
+                <a href="/products/" class="hover:text-yellow-300">Products</a>
+                <a href="/certificate/" class="hover:text-yellow-300">Certificates</a>
+                <a href="/contact/" class="hover:text-yellow-300">Contact Us</a>
+            </div>
+        </nav>
+
+        <!-- About Us Text -->
+        <h1 class="text-center text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mt-8 shadow-xl">
+            Certifications
+        </h1>
+    </div>
+
+    <!-- About Certificates Section -->
+    <div class="container mx-auto px-8 py-8">
+        <p
+            class="text-gray-700 text-center text-sm sm:text-base md:text-lg leading-relaxed w-[85%] sm:w-[70%] md:w-[60%] lg:w-[50%] mx-auto">
+            At Shrinath Agro, we are committed to delivering high-quality products that meet international standards of
+            safety, purity, and sustainability. Our certifications are a testament to our dedication to excellence,
+            transparency, and regulatory compliance.
+        </p>
+        <!-- Certificates points -->
+        <div class="bg-green-50 py-10 px-4 sm:px-10 lg:px-20 mt-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-green-800 text-center mb-10">We Assure You</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+
+                <!-- Quality Assurance -->
+                <div class="bg-white rounded-lg p-6 shadow hover:shadow-md transition duration-300">
+                    <i class="fas fa-check-circle text-green-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">Quality Assurance</h3>
+                    <p class="text-gray-600">Our certificates validate that every product meets strict quality and
+                        safety standards.</p>
+                </div>
+
+                <!-- Global Trust -->
+                <div class="bg-white rounded-lg p-6 shadow hover:shadow-md transition duration-300">
+                    <i class="fas fa-globe text-green-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">Global Trust</h3>
+                    <p class="text-gray-600">International certifications enable us to build lasting trust with clients
+                        worldwide.</p>
+                </div>
+
+                <!-- Compliance & Transparency -->
+                <div class="bg-white rounded-lg p-6 shadow hover:shadow-md transition duration-300">
+                    <i class="fas fa-balance-scale text-green-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">Compliance & Transparency</h3>
+                    <p class="text-gray-600">Our certifications prove our adherence to legal, ethical, and regulatory
+                        guidelines in every step of the supply chain.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Certificates Section -->
+    <div class="container mx-auto px-8 py-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 text-center mb-6">Our Certifications</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- Certificate Card -->
+            <div class="bg-green-100 border border-green-300 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow relative group cursor-pointer"
+                onclick="window.open('/static/certificates/fda-certificate.pdf', '_blank')">
+                <img src="/static/images/fda-logo.png" alt="Certificate 2" class="w-full h-40 object-cover rounded-md">
+                <div
+                    class="absolute inset-0 bg-green-600/80 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-lg font-semibold mb-2">FDA U.S. Food & Drug Administration</h3>
+                    <p class="text-sm">Tap to view PDF</p>
+                </div>
+            </div>
+            <!-- Certificate Card -->
+            <div class="bg-green-100 border border-green-300 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow relative group cursor-pointer"
+                onclick="window.open('/static/certificates/fssai-certificate.pdf', '_blank')">
+                <img src="/static/images/fssai-logo.jpg" alt="Certificate 2" class="w-full h-40 object-cover rounded-md">
+                <div
+                    class="absolute inset-0 bg-green-600/80 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-lg font-semibold mb-2">Food Safety and Standards Authority of India License</h3>
+                    <p class="text-sm">Tap to view PDF</p>
+                </div>
+            </div>
+            <!-- Certificate Card -->
+            <div class="bg-green-100 border border-green-300 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow relative group cursor-pointer"
+                onclick="window.open('/static/certificates/iec-certificate.pdf', '_blank')">
+                <img src="/static/images/iec-logo.png" alt="Certificate 3" class="w-full h-40 object-cover rounded-md">
+                <div
+                    class="absolute inset-0 bg-green-600/80 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-lg font-semibold mb-2">Government of India Importer-Exporter Code</h3>
+                    <p class="text-sm">Tap to view PDF</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Toggle mobile nav
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navbar = document.getElementById("navbar");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            navbar.classList.toggle("rounded-lg");
+            navbar.classList.toggle("rounded-t-lg");
+        });
+    </script>
+</body>
+
+</html>
